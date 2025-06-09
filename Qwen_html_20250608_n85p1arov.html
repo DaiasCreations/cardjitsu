@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Card-Jitsu Game</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
+</head>
+<body>
+
+<div id="menuScreen">
+  <h1>Card-Jitsu</h1>
+  <button onclick="showDifficulty()">Comenzar</button>
+</div>
+
+<div id="difficultyScreen" class="hidden">
+  <h1>Selecciona una dificultad</h1>
+  <button onclick="startGame('aprendiz')">Aprendiz</button>
+  <button onclick="startGame('combatiente')">Combatiente</button>
+  <button onclick="startGame('sensei')">Sensei</button>
+</div>
+
+<canvas id="gameCanvas" width="800" height="600"></canvas>
+<div id="thinkingMessage">La IA está pensando...</div>
+
+<div id="endScreen" class="hidden">
+  <div id="endMessage"></div>
+  <button onclick="goToMenu()">Volver al Menú</button>
+</div>
+
+<audio id="selectSound" src="assets/select.mp3"></audio>
+<audio id="victorySound" src="assets/victory.mp3"></audio>
+<audio id="defeatSound" src="assets/defeat.mp3"></audio>
+
+<script src="script.js"></script>
+</body>
+</html>
